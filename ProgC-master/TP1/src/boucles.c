@@ -3,12 +3,28 @@
 int main(){
     int a = 0;
     int b = 0;
-    int compteur = 8;
+    int c = 0;
+    int compteur = 5;
     for (a=0; a < compteur;a++){
-        printf("*\n");
-        for ()
-        //if (a>=3){
-        //    printf("#*\n")
+        if (a<compteur-1){
+            printf("*");
+            for (b=0; b < a;b++){
+                if (b>=0 && b<a-1){
+                    printf("#");
+                }
+                else {
+                    printf("*");
+                    
+                }
+            }
         }
+
+        else {
+            for (c=0; c < compteur;c++){
+            printf("*");
+            }
+        }
+        printf("\n");
+    }
     return 0;
 }
