@@ -3,7 +3,7 @@
 
 
 int main(){
-    float rayon = 3.8;
+    float rayon = 3.1;
     float aire = M_PI*rayon*rayon;
     float perimetre = 2*M_PI*rayon;
     printf("Le périmètre est %f\n",perimetre);
