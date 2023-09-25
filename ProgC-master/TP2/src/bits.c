@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+// à finir !!!!!!!!
 int main(){
     int d;
     
