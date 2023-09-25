@@ -2,8 +2,7 @@
 
 int main(){
     int d;
-    int result = 1;
     
-    printf("%i\n",);
+    printf("%i\n",d);
     return 0;
 }
