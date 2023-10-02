@@ -31,16 +31,16 @@ int main(){
             printf("%d\n", tab[i]);
     }
     // //DEMANDE UTILISATEUR
-    // printf("Entrez l'entier que vous souhaitez chercher : \n");
-    // scanf("%d", &valeur_Utilisateur);
-    // //CHERCHER GRACE A LA DICHOTOMIE
-    // for (i = 0;i<=100;i++){
-    //     valeurComparaison = tab[i];
-    //     if (valeurComparaison == valeur_Utilisateur){
-    //         printf("Résultat : entier présent\n");
-    //         return 0;
-    //     }
-    // }
-    // printf("Résultat : entier absent\n");   
+    printf("Entrez l'entier que vous souhaitez chercher : \n");
+    scanf("%d", &valeur_Utilisateur);
+    //CHERCHER GRACE A LA DICHOTOMIE
+    for (i = 0;i<=100;i++){
+        valeurComparaison = tab[i];
+        if (valeurComparaison == valeur_Utilisateur){
+            printf("Résultat : entier présent\n");
+            return 0;
+        }
+    }
+    printf("Résultat : entier absent\n");   
     return 0;
 }
