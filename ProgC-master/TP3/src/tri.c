@@ -19,10 +19,22 @@ int main(){
     }
 
     // tri du tableau
-    int valeurTraitee;
-    for (cptIndice = 0;cptIndice<=100;cptIndice++){
-        valeurTraitee = tabTri[cptIndice];
-        
+    int i;
+    int j;
+    int ValeurATrier;
+    for (i = 0;i<=100;i++){
+        for (j = i + 1; j < 100; ++j){
+                if (tabTri[i] > tabTri[j]){
+                    ValeurATrier =  tabTri[i];
+                    tabTri[i] = tabTri[j];
+                    tabTri[j] = ValeurATrier;
+                }
+        }
+    }
+    //AFFICHAGE TABLEAU
+    printf("\n Tableau trié : \n");
+    for (i = 0; i < 100; ++i){
+            printf(" %d ", tabTri[i]);
     }
     return 0;
 }
