@@ -1,32 +1,32 @@
 #include <stdio.h>
 
 int main(){
-    sizeof(int);
-    printf("La taille de int est : %lu octets\n", sizeof (int));
 
-    sizeof(int);
-    printf("La taille de int est : %p octets\n", sizeof (int));
+    int a = 1;
+    int *ptr_a = &a;
+    int *ptr2_a = &ptr_a;
 
-    sizeof(int);
-    printf("La taille de int est : %p octets\n", sizeof (int));
+    printf("La taille de int est : %lu octets\n", sizeof (a));
+    printf("La taille de int* est : %lu octets\n", sizeof(ptr_a));
+    printf("La taille de int** est : %lu octets\n", sizeof(ptr2_a));
 
-    sizeof(char);
-    printf("La taille de char est : %p octets\n", sizeof (char));
+    char b = 'b';
+    char *ptr_b = &b;
+    char *ptr2_b = &ptr_b;
+    char *ptr3_b = &ptr2_b;
 
-    sizeof(char);
-    printf("La taille de char est : %p octets\n", sizeof (char));
+    printf("La taille de char* est : %lu octets\n", sizeof(ptr_b));
+    printf("La taille de char** est : %lu octets\n", sizeof(ptr2_b));
+    printf("La taille de char*** est : %lu octets\n", sizeof(ptr3_b));
 
-    sizeof(char);
-    printf("La taille de char est : %p octets\n", sizeof (char));
-    
-    sizeof(float);
-    printf("La taille de float est : %p octets\n", sizeof (float));
+    float c = 10;
+    float *ptr_c = &c;
+    float *ptr2_c = &ptr_c;
+    float *ptr3_c = &ptr2_c;
 
-    sizeof(float);
-    printf("La taille de float est : %p octets\n", sizeof (float));
-
-    sizeof(float);
-    printf("La taille de float est : %p octets\n", sizeof (float));
+    printf("La taille de float* est : %lu octets\n", sizeof(ptr_c));
+    printf("La taille de float** est : %lu octets\n", sizeof(ptr2_c));
+    printf("La taille de float*** est : %lu octets\n", sizeof(ptr3_c));
 
     return 0;
 }
