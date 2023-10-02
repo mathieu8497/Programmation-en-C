@@ -24,11 +24,12 @@ int main(){
                     tab[i] = tab[j];
                     tab[j] = a;
                 }
-            }
         }
+    }
     //AFFICHAGE TABLEAU
-    for (i = 0; i < 100; ++i)
+    for (i = 0; i < 100; ++i){
             printf("%d\n", tab[i]);
+    }
     // //DEMANDE UTILISATEUR
     // printf("Entrez l'entier que vous souhaitez chercher : \n");
     // scanf("%d", &valeur_Utilisateur);
