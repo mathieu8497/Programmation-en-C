@@ -1,3 +1,7 @@
+// Nom du fichier : recherche_dichotomique.c
+// Objectif : Appliquer la recherche dichotomique dans un tableau trié
+// Auteurs : Mathieu Poirel & Emma Tricquet
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

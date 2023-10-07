@@ -1,3 +1,7 @@
+// Nom du fichier : sizeof.c
+// Objectif : Déterminer la taille en octets de différents types de données.
+// Auteurs : Mathieu Poirel & Emma Tricquet
+
 #include <stdio.h>
 
 int main(){
