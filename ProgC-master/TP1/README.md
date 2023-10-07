@@ -1,9 +1,9 @@
 # Bibliothèques
-* 
-*
+* stdio.h
+* math.h
 
 # Références
-*
+* https://johnsamuel.info/fr/enseignement/cours/2023/C
 *
 
 # Difficulté
