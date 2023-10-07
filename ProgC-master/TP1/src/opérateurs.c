@@ -1,6 +1,6 @@
-// Nom du fichier : operateurs.c
-// Objectif : Utiliser des opérateurs arithmétiques et logiques
-// Auteurs : Mathieu Poirel & Emma Tricquet
+/*Nom du fichier : operateurs.c
+Objectif : Utiliser des opérateurs arithmétiques et logiques
+Auteurs : Mathieu Poirel & Emma Tricquet */
 
 #include <stdio.h>
 

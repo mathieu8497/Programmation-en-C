@@ -1,6 +1,6 @@
-// Nom du fichier : conditions.c
-// Objectif : Utiliser des conditions et boucles avec divisibilité
-// Auteurs : Mathieu Poirel & Emma Tricquet
+/*Nom du fichier : conditions.c
+Objectif : Utiliser des conditions et boucles avec divisibilité
+Auteurs : Mathieu Poirel & Emma Tricquet */
 
 #include <stdio.h>
 

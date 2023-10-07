@@ -1,6 +1,6 @@
-// Nom du fichier : boucles.c
-// Objectif : Affichage d'un triangle rectangle avec des boucles
-// Auteurs : Mathieu Poirel & Emma Tricquet
+/*Nom du fichier : boucles.c
+Objectif : Affichage d'un triangle rectangle avec des boucles
+Auteurs : Mathieu Poirel & Emma Tricquet */
 
 #include <stdio.h>
 
