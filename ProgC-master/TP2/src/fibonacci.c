@@ -1,3 +1,7 @@
+/*Nom du fichier : fibonacci.c
+Objectif : Générer la suite de Fibonacci en langage C
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 
 int main(){

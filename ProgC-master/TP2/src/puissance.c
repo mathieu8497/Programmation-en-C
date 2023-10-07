@@ -1,5 +1,5 @@
-/*Nom du fichier : chercher2.c
-Objectif : Rechercher une phrase exacte dans un tableau de phrases
+/*Nom du fichier : puissance.c
+Objectif : Calculer la puissance en C
 Auteurs : Mathieu Poirel & Emma Tricquet*/
 
 #include <stdio.h>

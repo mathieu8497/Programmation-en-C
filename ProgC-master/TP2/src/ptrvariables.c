@@ -1,3 +1,7 @@
+/*Nom du fichier : ptrvariables.c
+Objectif : Manipuler des Variables de Types de Base avec des Pointeurs
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 
 int main(){

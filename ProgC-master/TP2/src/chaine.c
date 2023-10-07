@@ -1,3 +1,7 @@
+/*Nom du fichier : chaine.c
+Objectif : Manipuler des Chaînes de Caractères en C
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 
 int main(){

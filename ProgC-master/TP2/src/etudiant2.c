@@ -1,3 +1,7 @@
+/*Nom du fichier : etudiant2.c
+Objectif : Gérer des Données d'Étudiant.e.s en C avec des Structures
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 #include <string.h>
 

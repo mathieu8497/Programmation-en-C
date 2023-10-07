@@ -1,3 +1,7 @@
+/*Nom du fichier : etudiant.c
+Objectif : Gérer des Données d'Étudiant.e.s en C
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 
 int main(){
