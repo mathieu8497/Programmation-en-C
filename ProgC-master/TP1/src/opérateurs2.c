@@ -1,6 +1,6 @@
-// Nom du fichier : operateurs2.c
-// Objectif : Utiliser l'opérateur switch pour des opérations mathématiques
-// Auteurs : Mathieu Poirel & Emma Tricquet
+/*Nom du fichier : operateurs2.c
+Objectif : Utiliser l'opérateur switch pour des opérations mathématiques
+Auteurs : Mathieu Poirel & Emma Tricquet */
 
 #include <stdio.h>
 

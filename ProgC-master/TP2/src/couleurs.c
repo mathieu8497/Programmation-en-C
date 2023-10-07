@@ -1,3 +1,7 @@
+/*Nom du fichier : couleurs.c
+Objectif : Représenter des couleurs au format RGBA (rouge, vert, bleu, alpha).
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 #include <string.h>
 

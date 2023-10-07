@@ -1,6 +1,6 @@
-// Nom du fichier : sizeof_types.c
-// Objectif : Définir les tailles des types de base
-// Auteurs : Mathieu Poirel & Emma Tricquet
+/*Nom du fichier : sizeof_types.c
+Objectif : Définir les tailles des types de base
+Auteurs : Mathieu Poirel & Emma Tricquet */
 
 #include <stdio.h>
 

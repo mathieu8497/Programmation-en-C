@@ -2,6 +2,7 @@
 * stdio.h
 * stdlib.h
 * time.h
+* limits.h
 
 # Références
 * Groupe de Maxime Balleur et Alice Esmilaire pour l'exercice recherche_dichotomique

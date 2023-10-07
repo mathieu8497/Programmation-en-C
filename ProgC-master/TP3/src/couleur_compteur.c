@@ -1,3 +1,7 @@
+/*Nom du fichier : couleur_compteur.c
+Objectif : Compter les couleurs distinctes dans un tableau
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
