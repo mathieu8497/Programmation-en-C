@@ -43,8 +43,9 @@ int main(){
     int max = 100;
     int cpt;
 
-    while (cpt<size) {
-        mid = (min + max) / 2;
+    while (cpt<size) //le compteur est plus petit que la taille du tableau
+    {
+        mid = (min + max) / 2; //on re-calcule le milieu à chaque itération
 
         if (tab[mid]== valeur_Utilisateur){
             printf("Résultat : entier présent\n");
@@ -56,7 +57,7 @@ int main(){
         else{
             min = mid;
         }
-        cpt ++;
+        cpt ++; 
     }
     printf("Résultat : entier absent\n");   
     return 0;
