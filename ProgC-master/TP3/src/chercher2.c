@@ -20,30 +20,39 @@ int main(){
 
     int motTrouve = 0;
     int tailleMax = 10;
-    int verif =0;
+    int verif;
     int cpt;
     int carac;
-    char PhraseDonnee[60] = "Les pointeurs en C peuvent être déroutants.";
-    
+
+    // phrase test à modifier au besoin
+    char PhraseDonnee[60] = "La recherche dans un tableau est intéressante.";
+
+    // double boucle for pour parcourir les différentes phrases et les caractères un par un
     for (cpt =0; cpt < tailleMax; cpt++){
         for (carac = 0; carac <60; carac++)
-        {
+        {verif = 0; //initialisation du nombre de vérification à 0 pour chaque caractère
             if (PhraseDonnee[carac]==phrases[cpt][carac])
             {
-                verif++;
+                verif = 1; //si le caractère est le bon alors verif passe à 1 (et cela jusqu'au dernier caractère)
                 continue;
             }
             else
             {
-                break;
+                break; //pas besoin de continuer à parcourir la phrase si le caractère est différent
             } 
         }
-        if (verif==60)
+        if (verif==1)
         {
-            printf("Phrase trouvée : %s", PhraseDonnee);
+            printf("Phrase trouvée : %s \n", PhraseDonnee);
             break;
         }
     
     }
+    // à la fin des 2 boucles for
+    if (verif ==0)
+    {
+        printf("Phrase non trouvée \n");
+    }
+    
     return 0;
 }
