@@ -1,5 +1,5 @@
 /*Nom du fichier : chercher2.c
-Objectif : Rechercher une phrase dans un tableau de phrases
+Objectif : Rechercher une phrase exacte dans un tableau de phrases
 Auteurs : Mathieu Poirel & Emma Tricquet*/
 
 #include <stdio.h>
