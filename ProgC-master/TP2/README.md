@@ -14,5 +14,5 @@
 *
 
 # Commentaires
-*
+* Exo 2.9 à continuer
 
