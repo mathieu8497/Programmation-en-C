@@ -1,3 +1,7 @@
+// Nom du fichier : variables.c
+// Objectif : Affecter et afficher des variables de types de base
+// Auteurs : Mathieu Poirel & Emma Tricquet
+
 #include <stdio.h>
 
 int main(){
