@@ -1,5 +1,8 @@
+// Nom du fichier : operateurs.c
+// Objectif : Utiliser des opérateurs arithmétiques et logiques
+// Auteurs : Mathieu Poirel & Emma Tricquet
+
 #include <stdio.h>
-// #include <stdbool.h>
 
 int main(){
     int a = 16, b = 3;
