@@ -18,7 +18,6 @@ int main(){
         "Programmer en C, c'est génial."
     };
 
-    int motTrouve = 0;
     int tailleMax = 10;
     int verif;
     int cpt;
