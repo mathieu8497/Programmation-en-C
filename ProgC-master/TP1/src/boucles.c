@@ -9,6 +9,8 @@ int main(){
     int b = 0;
     int c = 0;
     int compteur = 5;
+
+    // avec la boucle for
     for (a=0; a < compteur;a++){
         if (a<compteur-1){
             printf("*");
@@ -30,5 +32,38 @@ int main(){
         }
         printf("\n");
     }
+
+
+    // avec la boucle while
+    printf("\n\n\n");
+    int d = 0;
+    int e = 0;
+    int f = 0;
+
+    while (d<compteur)
+    {
+        if (d<compteur-1){
+            printf("*");
+            for (e=0; e < d;e++){
+                if (e>=0 && e<d-1){
+                    printf("#");
+                }
+                else {
+                    printf("*");
+                    
+                }
+            }
+        }
+
+        else {
+            for (f=0; f < compteur;f++){
+            printf("*");
+            }
+        }
+        printf("\n");
+        d++;
+    }
+        
+    
     return 0;
 }
