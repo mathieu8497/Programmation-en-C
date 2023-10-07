@@ -1,6 +1,6 @@
-// Nom du fichier : cercle.c
-// Objectif : Calculer l'aire et le périmètre d'un cercle en langage C
-// Auteurs : Mathieu Poirel & Emma Tricquet
+/*Nom du fichier : cercle.c
+Objectif : Calculer l'aire et le périmètre d'un cercle en langage C
+Auteurs : Mathieu Poirel & Emma Tricquet */
 
 #include <stdio.h>
 #include <math.h>

@@ -1,8 +1,11 @@
+/*Nom du fichier : grand_petit.c
+Objectif : Trouver le numéro le plus grand et le plus petit dans un tableau
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #include <limits.h>
-
 
 int main(){
     int tab[100];

@@ -1,3 +1,7 @@
+// Nom du fichier : tri.c
+// Objectif : Trier un tableau de manière croissante.
+// Auteurs : Mathieu Poirel & Emma Tricquet
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

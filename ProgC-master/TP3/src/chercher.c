@@ -1,3 +1,7 @@
+/*Nom du fichier : chercher.c
+Objectif : Chercher un entier dans un tableau
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
