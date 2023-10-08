@@ -5,6 +5,9 @@ Auteurs : Mathieu Poirel & Emma Tricquet*/
 #include <stdio.h>
 
 int main(){
+    int tailleMax = 10;
+    
+    //tableau contenant les phrases correctes (10 phrases de 60 caractères)
     char phrases[10][60] = {
         "Bonjour, comment ça va ?",
         "Le temps est magnifique aujourd'hui.",
@@ -18,7 +21,6 @@ int main(){
         "Programmer en C, c'est génial."
     };
 
-    int tailleMax = 10;
     int verif;
     int cpt;
     int carac;
@@ -37,7 +39,7 @@ int main(){
             }
             else
             {
-                break; //pas besoin de continuer à parcourir la phrase si le caractère est différent
+                break; //inutile de continuer à parcourir la phrase si le caractère est différent
             } 
         }
         if (verif==1)

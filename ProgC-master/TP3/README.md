@@ -10,9 +10,9 @@
 * https://www.w3schools.com/c/c_pointers.php
 
 # Difficulté
-*
+* 
 
 # Commentaires
-* A faire encore 3.6, 3.7 a continuer
+* 
 * 
 

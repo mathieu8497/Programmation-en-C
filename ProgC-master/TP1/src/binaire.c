@@ -10,7 +10,7 @@ int main(){
     int c = 65535;
     int d = 1024;
     int i;
-    int valeur = b;
+    int valeur = c;
     int NombreBinaire[20];
 
     //Test avec 4096 a transformer en binaire
@@ -18,7 +18,7 @@ int main(){
         NombreBinaire[i] = valeur%2;
         valeur = valeur/2;
         }
-    printf("En binaire cela donne : ");
+    printf("En binaire cela donne : \n");
     for (i = 20; i >= 0; i--){
         printf("%i", NombreBinaire[i]);
     }
