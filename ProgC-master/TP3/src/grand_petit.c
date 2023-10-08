@@ -24,7 +24,7 @@ int main(){
             int_grand = randomValue;
         }
         tab[i] = randomValue;
-        printf("%d\n", tab[i]);
+        //printf("%d\n", tab[i]);
         valeurPrecedente = randomValue;
     }
     printf("Le numéro le plus grand est :%i\n", int_grand);

@@ -5,7 +5,6 @@ Auteurs : Mathieu Poirel & Emma Tricquet */
 #include <stdio.h>
 #include <math.h>
 
-
 int main(){
     float rayon = 3.1;
     float aire = M_PI*rayon*rayon;

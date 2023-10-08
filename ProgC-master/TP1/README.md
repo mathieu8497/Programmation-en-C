@@ -11,5 +11,5 @@
 
 # Commentaires
 * ON DOIT FAIRE LA PARTIE SIGNED ET UNSIGNED DE 1.3 et 1.4
-* 
+* faire 1.9 (binaire.c)
 

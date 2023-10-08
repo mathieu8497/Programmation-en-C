@@ -5,7 +5,7 @@ Auteurs : Mathieu Poirel & Emma Tricquet*/
 #include <stdio.h>
 
 int main(){
-    int d = 1048593;
+    int d = 1048592;
     int mask4 = (1<<4);
     int mask20 = (1<<20);
     int result;

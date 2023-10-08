@@ -5,7 +5,7 @@
 * limits.h
 
 # Références
-* Groupe de Maxime Balleur et Alice Esmilaire pour l'exercice recherche_dichotomique
+* Aide apportée par le groupe de Maxime Balleur et Alice Esmilaire pour l'exercice recherche_dichotomique
 * https://johnsamuel.info/fr/enseignement/cours/2023/C
 * https://www.w3schools.com/c/c_pointers.php
 

@@ -5,9 +5,9 @@ Auteurs : Mathieu Poirel & Emma Tricquet */
 #include <stdio.h>
 
 int main(){
-    char op = '&';
-    int num1 = 30;
-    int num2 = 10;
+    char op = '+';
+    int num1 = 13;
+    int num2 = 2;
     int result;
     switch (op) //le calcul depend de op
     {

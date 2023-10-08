@@ -43,7 +43,7 @@ int main(){
         if (verif==1)
         {
             printf("Phrase trouvée : %s \n", PhraseDonnee);
-            break;
+            return 0;
         }
     
     }

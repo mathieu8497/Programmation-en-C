@@ -18,7 +18,7 @@ int main(){
     struct couleur couleur_rgba[10];
 
     couleur_rgba[0] = (struct couleur){0xEF, 0x78, 0x12, 0xFF};
-    couleur_rgba[1] = (struct couleur){255, 255, 255, 255};
+    couleur_rgba[1] = (struct couleur){0xFF, 0xFF, 0xFF, 0xFF};
     couleur_rgba[2] = (struct couleur){75, 78, 12, 0xFF};
     couleur_rgba[3] = (struct couleur){45, 58, 32, 0};
     couleur_rgba[4] = (struct couleur){251, 35, 12, 11};

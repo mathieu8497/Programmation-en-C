@@ -21,7 +21,7 @@ int main(){
     struct couleur couleur_rgba[100];
 
     for (i = 0;i<100;i++){
-    couleur_rgba[i] = (struct couleur){rand()%250, rand()%250, rand()%250, rand()%250};
+    couleur_rgba[i] = (struct couleur){rand()%256, rand()%256, rand()%256, rand()%256};
     }
 
     for (cpt=0;cpt<100;cpt++){
@@ -33,6 +33,15 @@ int main(){
         printf("\n");
     }
 
+    for (size_t i = 0; i < count; i++)
+    {
+        for (size_t i = 0; i < count; i++)
+        {
+            
+        }
+        
+    }
+    
     
     return 0;
 }
