@@ -6,6 +6,8 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
+    // Fonction lire fichier
+
 void lire_fichier(char* nom_de_fichier)
     {
         char contenu[1000];
@@ -27,14 +29,15 @@ void lire_fichier(char* nom_de_fichier)
         write(fd, message, sizeof(message));
         printf("Le message a été écrit dans le fichier %s\n", nom_de_fichier);
     }
-
+    
+// Programme principal
 int main()
 {
     int choix;
     char nom_de_fichier[50];
     char message[1000];
 
-    // Programme principal
+
     printf("Que souhaitez-vous faire ? : \n 1. Lire un fichier \n 2. Écrire dans un fichier \n");
     printf("Votre choix : \n");
     scanf("%d", &choix);
