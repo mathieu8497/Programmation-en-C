@@ -4,39 +4,30 @@ Auteurs : Mathieu Poirel & Emma Tricquet*/
 
 #include <stdio.h>
 
-int operations(char op, int num1, int num2)
-{
-    switch (op)
-    {
-    case '+':
-        return num1 + num2;
-        break;
+int addition (int num1,int num2){
+    return num1 + num2;
+}
 
-    case '-':
-        return num1 - num2;
-        break;
+int soustraction (int num1,int num2){
+    return num1 - num2;
+}
 
-    case '*':
-        return num1 * num2;
-        break;
+int multiplication (int num1,int num2){
+    return num1 * num2;
+}
 
-    case '%':
-        return num1 % num2;
-        break;
+int divisionEntiere (int num1,int num2){
+    return num1 % num2;
+}
 
-    case '/':
-        return num1 / num2;
-        break;
+int division (int num1,int num2){
+    return num1 / num2;
+}
 
-    case '&':
-        return num1 & num2;
-        break;
+int et (int num1,int num2){
+    return num1 & num2;
+}
 
-    case '|':
-        return num1 | num2;
-        break;
-    
-    default:
-        break;
-    }
+int ou (int num1,int num2){
+    return num1 | num2;
 }
