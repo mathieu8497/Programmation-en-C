@@ -4,4 +4,16 @@ Auteurs : Mathieu Poirel & Emma Tricquet*/
 
 #include <stdio.h>
 
-int operations(char, int, int);
+int addition (int,int);
+
+int soustraction (int,int);
+
+int multiplication (int,int);
+
+int divisionEntiere (int,int);
+
+int division (int,int);
+
+int et (int,int);
+
+int ou (int,int);
