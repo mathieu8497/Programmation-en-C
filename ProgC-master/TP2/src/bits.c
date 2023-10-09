@@ -1,5 +1,5 @@
 /*Nom du fichier : bits.c
-Objectif : 
+Objectif : Vérifier les Bits en language C
 Auteurs : Mathieu Poirel & Emma Tricquet*/
 
 #include <stdio.h>

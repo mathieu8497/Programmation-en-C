@@ -10,7 +10,7 @@
 * https://www.w3schools.com/c/c_pointers.php
 
 # Difficulté
-* 
+* Au debut du TP, difficulté pour prendre en main les structures et comprendre la commande random mais au final nous avons bien compris tous les éléments du TP. 
 
 # Commentaires
 * 

@@ -8,6 +8,7 @@ Auteurs : Mathieu Poirel & Emma Tricquet*/
 
 int main(){
     int cpt = 0;
+    //Definition de la structure d'un etudiant type
     struct etudiant {
     char prenom[50];
     char nom[50];
@@ -15,7 +16,7 @@ int main(){
     int note1;
     int note2;
     };
-
+    //Création de la structure en rajoutant 5 étudiants et leurs caracteristiques respectives
     struct etudiant etudiant_cpe[135];
 
     strcpy(etudiant_cpe[0].prenom, "Pierre");

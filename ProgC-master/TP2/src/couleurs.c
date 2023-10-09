@@ -8,13 +8,14 @@ Auteurs : Mathieu Poirel & Emma Tricquet*/
 
 int main(){
     int cpt = 0;
+    //Définition de la structure d'une couleur type
     struct couleur {
     unsigned char Rouge;
     unsigned char Vert;
     unsigned char Bleu;
     unsigned char Alpha;
     };
-
+    //Création de notre structure en rajoutant 10 élements(couleur) à notre structure
     struct couleur couleur_rgba[10];
 
     couleur_rgba[0] = (struct couleur){0xEF, 0x78, 0x12, 0xFF};
@@ -27,6 +28,8 @@ int main(){
     couleur_rgba[7] = (struct couleur){252, 85, 185, 196};
     couleur_rgba[8] = (struct couleur){253, 56, 165, 174};
     couleur_rgba[9] = (struct couleur){254, 45, 125, 185};
+    
+    //On affiche chacune des couleurs avec leurs caracteristiques
 
     for (cpt=0;cpt<10;cpt++){
         printf("Couleur :%i\n",cpt);

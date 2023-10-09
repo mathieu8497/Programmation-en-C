@@ -5,6 +5,7 @@ Auteurs : Mathieu Poirel & Emma Tricquet*/
 #include <stdio.h>
 
 int main(){
+    //Def des differentes valeurs
     char valeur = "P";
     short valeur1 = 18;
     int valeur2 = 18;
@@ -14,6 +15,7 @@ int main(){
     double valeur6 = 18.4545;
     long double valeur7 = 18.454464646;
 
+    //Affichage après manipulation
     printf("\nAvant Manipulation :\n");
     printf("Adresse de valeur(char) : %p, Valeur de c : 0x%x\n", (void*)&valeur, valeur);
     printf("Adresse de valeur(short) : %p, Valeur de c : 0x%x\n", (void*)&valeur1, valeur1);
@@ -24,6 +26,7 @@ int main(){
     printf("Adresse de valeur(double) : %p, Valeur de c : 0x%llx\n", (void*)&valeur6, valeur6);
     printf("Adresse de valeur(long double) : %p, Valeur de c : 0x%llx\n", (void*)&valeur7, valeur7);
 
+    //On initialise nos pointeurs
     char *ptr_valeur = &valeur;
     short *ptr_valeur1 = &valeur1;
     int *ptr_valeur2 = &valeur2;
@@ -33,6 +36,7 @@ int main(){
     double *ptr_valeur6 = &valeur6;
     long double *ptr_valeur7 = &valeur7;
 
+    //Et on change les valeurs à présent
     *ptr_valeur = "X";
     *ptr_valeur = 456;
     *ptr_valeur = 12;
@@ -42,6 +46,7 @@ int main(){
     *ptr_valeur = 2.222;
     *ptr_valeur = 2.56464646;
 
+    //Affichage après manipulation
     printf("\nAprès Manipulation :\n");
     printf("Adresse de valeur(char) : %p, Valeur de c : 0x%x\n", (void*)&valeur, valeur);
     printf("Adresse de valeur(short) : %p, Valeur de c : 0x%x\n", (void*)&valeur1, valeur1);

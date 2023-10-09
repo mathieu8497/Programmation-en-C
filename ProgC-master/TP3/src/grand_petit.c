@@ -14,6 +14,8 @@ int main(){
     int int_grand = INT_MIN;
     int valeurPrecedente = 0;
     srand(time(NULL));
+    //a chaque valeur ajoutéé dans le tableau on la compare en meme temps a la valeur précédemment ajoutée au tableau pour savoir si elle est plus ou moins grande
+    //si plus grand alors on l'associe à une nouvelle valeur 
     for (i = 0;i<=100;i++){
         int randomValue = rand() % 1000;
         
