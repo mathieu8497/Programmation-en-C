@@ -7,6 +7,7 @@ Auteurs : Mathieu Poirel & Emma Tricquet */
 
 int main(){
     float rayon = 3.1;
+    //On utilise la M_PI pour avoir le valeur de PI la plus précise
     float aire = M_PI*rayon*rayon;
     float perimetre = 2*M_PI*rayon;
     printf("Le périmètre est %f\n",perimetre);

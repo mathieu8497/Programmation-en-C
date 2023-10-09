@@ -11,8 +11,8 @@
 
 
 # Difficulté
-*
+* Pas de difficultées notoires à part pour l'exercice 2.9 où nous avons eu des difficultés pour réaliser des tableaux en utilisant uniquement des pointeurs et pas de manipulation indicielles.
 
 # Commentaires
-* Exo 2.9 à continuer
+* 
 

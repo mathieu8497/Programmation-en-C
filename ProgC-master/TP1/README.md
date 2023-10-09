@@ -7,9 +7,8 @@
 *
 
 # Difficulté
-*
+* Aucune difficultés particulière pour ce premier TP. Nous avons pris un peu de temps pour prendre en main la programmation en C qui diffère un petit peu par rapport à Python mais après 4h de TP ça allait deja beaucoup mieux.
 
 # Commentaires
-* ON DOIT FAIRE LA PARTIE SIGNED ET UNSIGNED DE 1.3 et 1.4
-* faire 1.9 (binaire.c)
+*
 
