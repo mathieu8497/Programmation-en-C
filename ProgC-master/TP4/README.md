@@ -11,6 +11,6 @@
 *
 
 # Commentaires
-* 
+* Faire Exo 4.3 et finir (4.7 et 4.6)
 * 
 
