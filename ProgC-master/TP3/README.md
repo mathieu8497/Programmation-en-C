@@ -10,7 +10,8 @@
 * https://www.w3schools.com/c/c_pointers.php
 
 # Difficulté
-* Au debut du TP, difficulté pour prendre en main les structures et comprendre la commande random mais au final nous avons bien compris tous les éléments du TP. 
+* Au debut du TP, difficulté pour prendre en main les structures et comprendre la commande random mais au final nous avons bien compris tous les éléments du TP.
+* nous ne savons pas comment procéder à l'affichage des octets comme demandé dans l'exercice 3.6 (octets.c)
 
 # Commentaires
 * 
