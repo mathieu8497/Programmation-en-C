@@ -1,2 +1,2 @@
-1. 
-2. 
+1. POIREL Mathieu
+2. TRICQUET Emma
