@@ -5,7 +5,7 @@ int main()
 {
     int numero1;
     int numero2;
-    int resultat
+    int resultat;
     char op;
 
 
