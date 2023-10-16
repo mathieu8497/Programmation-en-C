@@ -55,7 +55,26 @@ int recois_envoie_message(int client_socket_fd, char *data)
   {
     if (strcmp(code, "message:") == 0)
     {
-      return renvoie_message(client_socket_fd, data);
+      // Demande à l'utilisateur d'entrer un message
+      char message[1024];
+      printf("Votre message (max 1000 caractères): ");
+      fgets(message, sizeof(message), stdin);
+
+      // Construit le message avec une étiquette "message: "
+      strcpy(data, "\nRéponse: ");
+      strcat(data, message);
+
+      // Envoie le message au client
+      int write_status = write(client_socket_fd, data, strlen(data));
+      if (write_status < 0)
+      {
+        perror("Erreur d'écriture");
+        return -1;
+      }
+      // Réinitialisation de l'ensemble des données
+      memset(data, 0, sizeof(data));
+
+      return 0; // Succès
     }
   }
 
