@@ -50,8 +50,27 @@ int lire_dossier_recursif(char *NomRepertoire2)
             break;
         }
         printf("%s\n", ent->d_name);
+
+        if ((ent->d_name == '.') ||(ent->d_name == '..'))
+        {
+            break;
+        }
+        
+
+        if (ent->d_type==4) //un dossier vaut 4 
+        {
+            char chemin[400];
+            snprintf(chemin, sizeof(chemin),"%s/%s",NomRepertoire2,ent->d_name);
+            lire_dossier_recursif(chemin);
+        }
+        else{
+            break;
+        }
+        
+        //printf("%i\n", ent->d_type);
+        
     }
-    lire_dossier_recursif(NomRepertoire2/dirent.d_name);
+
     closedir(dirp);
     return (EXIT_SUCCESS);
 }
@@ -67,7 +86,7 @@ int main(int argc, char *argv[])
     }
 
     char *nom_repertoire = argv[1];
-    y = lire_dossier(nom_repertoire);
+    y = lire_dossier_recursif(nom_repertoire);
 
     return y;
 }
