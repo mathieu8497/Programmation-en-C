@@ -1,3 +1,7 @@
+/*Nom du fichier : repertoire.c
+Objectif : Ouvrir un dossier et lire les fichiers dedans
+Auteurs : Mathieu Poirel & Emma Tricquet */
+
 #include "repertoire.h"
 #include <stdio.h>
 #include <dirent.h>
@@ -5,6 +9,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+/* Fonction Lecture de dossier*/
 int lire_dossier(char *nom_repertoire)
 {
     DIR *dirp = opendir(nom_repertoire);
@@ -27,6 +32,31 @@ int lire_dossier(char *nom_repertoire)
     return (EXIT_SUCCESS);
 }
 
+/*Fonction récursive lecture de dossier*/
+int lire_dossier_recursif(char *NomRepertoire2)
+{
+    DIR *dirp = opendir(NomRepertoire2);
+    struct dirent *ent;
+    if (dirp == NULL)
+    {
+        perror("opendir");
+        return (EXIT_FAILURE);
+    }
+    while (1)
+    {
+        ent = readdir(dirp);
+        if (ent == NULL)
+        {
+            break;
+        }
+        printf("%s\n", ent->d_name);
+    }
+    lire_dossier_recursif(NomRepertoire2/dirent.d_name);
+    closedir(dirp);
+    return (EXIT_SUCCESS);
+}
+
+/* fonction principale*/
 int main(int argc, char *argv[])
 {
     int y;
