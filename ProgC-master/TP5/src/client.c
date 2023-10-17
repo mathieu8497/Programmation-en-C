@@ -21,6 +21,7 @@
  * @param socketfd Le descripteur de la socket utilisée pour la communication.
  * @return 0 en cas de succès, -1 en cas d'erreur.
  */
+
 int envoie_recois_message(int socketfd)
 {
   char data[1024];

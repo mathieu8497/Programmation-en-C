@@ -81,6 +81,65 @@ int recois_envoie_message(int client_socket_fd, char *data)
   return (EXIT_SUCCESS);
 }
 
+int recois_numeros_calcule(int client_socket_fd, char *data)
+{
+  printf("Calcul en cours: %s\n", data);
+  char operateur;
+  int num1, num2;
+  int resultat;
+  sscanf(data + 9, " %c %d %d", &operateur, &num1, &num2);
+  switch (operateur)
+  {
+  case '+':
+    resultat = num1 + num2;
+    break;
+
+  case '-':
+    resultat = num1 - num2;
+    break;
+
+  case '*':
+    resultat = num1 * num2;
+    break;
+
+  case '%':
+    resultat = num1 % num2;
+    break;
+
+  case '/':
+    resultat = num1 / num2;
+    break;
+
+  case '&':
+    resultat = num1 & num2;
+    break;
+
+  case '|':
+    resultat = num1 | num2;
+    break;
+
+  default:
+    break;
+  }
+
+  printf("%i \n", resultat);
+
+  // Construit le message avec une étiquette "message: "
+  strcpy(data, "\nRéponse: ");
+  // Envoie le message au client
+  int write_status = write(client_socket_fd, data, strlen(data));
+  if (write_status < 0)
+  {
+    perror("Erreur d'écriture");
+    return -1;
+  }
+  // Réinitialisation de l'ensemble des données
+  memset(data, 0, sizeof(data));
+
+  return 0; // Succès
+
+  return (EXIT_SUCCESS);
+}
 /**
  * Gestionnaire de signal pour Ctrl+C (SIGINT).
  * @param signal : Le signal capturé (doit être SIGINT pour Ctrl+C).
@@ -132,8 +191,19 @@ void gerer_client(int client_socket_fd)
       close(client_socket_fd);
       break; // Sortir de la boucle de communication avec ce client
     }
-
-    recois_envoie_message(client_socket_fd, data);
+    char code[10];
+    if (sscanf(data, "%9s", code) == 1)
+    {
+      if (strcmp(code, "calcule") == 0)
+      {
+        printf("Calcul en cours: %s\n", data);
+        recois_numeros_calcule(client_socket_fd, data);
+      }
+      else
+      {
+        recois_envoie_message(client_socket_fd, data);
+      }
+    }
   }
 }
 
