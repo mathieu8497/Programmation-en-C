@@ -34,10 +34,23 @@ int envoie_recois_message(int socketfd)
   printf("Votre message (max 1000 caractères): ");
   fgets(message, sizeof(message), stdin);
 
-  // Construit le message avec une étiquette "message: "
-  strcpy(data, "message: ");
-  strcat(data, message);
-
+  // Construit le message avec une étiquette "message: " seulement si ce n'est pas un calcul
+  char code[10];
+  if (sscanf(message, "%8s", code) == 1)
+  {
+    if (strcmp(code, "calcule:") == 0)
+    {
+      printf("On calcule\n");
+      strcat(data, message);
+    }
+    else
+  {
+    strcpy(data, "message: ");
+    strcat(data, message);
+  }
+  }
+  
+  
   // Envoie le message au client
   int write_status = write(socketfd, data, strlen(data));
   if (write_status < 0)

@@ -83,11 +83,10 @@ int recois_envoie_message(int client_socket_fd, char *data)
 
 int recois_numeros_calcule(int client_socket_fd, char *data)
 {
-  printf("Calcul en cours: %s\n", data);
   char operateur;
   int num1, num2;
   int resultat;
-  sscanf(data + 9, " %c %d %d", &operateur, &num1, &num2);
+  sscanf(data + 8, "%c %d %d", &operateur, &num1, &num2);
   switch (operateur)
   {
   case '+':
@@ -122,10 +121,15 @@ int recois_numeros_calcule(int client_socket_fd, char *data)
     break;
   }
 
-  printf("%i \n", resultat);
 
-  // Construit le message avec une étiquette "message: "
-  strcpy(data, "\nRéponse: ");
+  printf("%i \n", resultat);
+  char charValue[10];
+  sprintf(charValue, "%d", resultat);
+  // Construit le message avec une étiquette "calcule: "
+  strcpy(data, "\ncalcule: ");
+  strcat(data, charValue);
+
+
   // Envoie le message au client
   int write_status = write(client_socket_fd, data, strlen(data));
   if (write_status < 0)
@@ -192,9 +196,9 @@ void gerer_client(int client_socket_fd)
       break; // Sortir de la boucle de communication avec ce client
     }
     char code[10];
-    if (sscanf(data, "%9s", code) == 1)
+    if (sscanf(data, "%8s", code) == 1)
     {
-      if (strcmp(code, "calcule") == 0)
+      if (strcmp(code, "calcule:") == 0)
       {
         printf("Calcul en cours: %s\n", data);
         recois_numeros_calcule(client_socket_fd, data);
