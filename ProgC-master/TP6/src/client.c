@@ -93,6 +93,15 @@ void analyse(char *pathname, char *data)
 int envoie_couleurs(int socketfd, char *pathname)
 {
   char data[1024];
+
+  // Demandez à l'utilisateur d'entrer un message
+  char couleur[1024];
+  int nb_couleur;
+  printf("Combien de couleurs voulez vous afficher dans le cercle ? : ");
+  fgets(couleur, sizeof(couleur), stdin);
+  nb_couleur = atoi(couleur);
+  printf("nombre couleur:%i",nb_couleur);
+
   memset(data, 0, sizeof(data));
   analyse(pathname, data);
 
