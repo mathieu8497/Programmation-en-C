@@ -10,7 +10,6 @@ Auteurs : Mathieu Poirel & Emma Tricquet */
 #include <stdlib.h>
 #include <string.h>
 
-
 /* Fonction Lecture de dossier*/
 int lire_dossier(char const *nom_repertoire)
 {
@@ -62,6 +61,29 @@ int lire_dossier_recursif(char const *NomRepertoire2)
     return (EXIT_SUCCESS);
 }
 
+/*Fonction itérative lecture de dossier*/
+int lire_dossier_iteratif(char const *NomRepertoire2)
+{
+    struct dirent *ent;
+    char chemin[400];
+    int i;
+    DIR *dirp = opendir(NomRepertoire2);
+    if (dirp == NULL)
+    {
+        perror("opendir");
+        return (EXIT_FAILURE);
+    }
+    while ((ent = readdir(dirp)) != NULL)
+    {
+        if (ent->d_type == DT_DIR)
+        {
+            printf("%s\n", ent->d_name);
+        }
+    }
+    closedir(dirp);
+    return (EXIT_SUCCESS);
+}
+
 /* fonction principale*/
 int main(int argc, char *argv[])
 {
@@ -77,6 +99,8 @@ int main(int argc, char *argv[])
     // y = lire_dossier(nom_repertoire);
     // Exo 2
     y = lire_dossier_recursif(nom_repertoire);
+    // Exo 3
+    // y = lire_dossier_iteratif(nom_repertoire);
 
     return y;
 }
