@@ -6,15 +6,6 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 
-// Demandez à l'utilisateur de saisir le nom du fichier dans lequel il souhaite effectuer la recherche.
-// Demandez à l'utilisateur de saisir la phrase qu'il souhaite rechercher.
-// Ouvrez le fichier en utilisant les fonctions de lecture de fichiers en C (par exemple, open, read, fopen, fgets).
-// Parcourez chaque ligne du fichier et comptez combien de fois la phrase recherchée apparaît dans chaque ligne.
-// Si la phrase est présente dans une ligne, affichez le numéro de la ligne et le nombre de fois qu'elle apparaît dans cette ligne.
-// Répétez le processus pour toutes les lignes du fichier.
-// Fermez le fichier après avoir terminé.
-// Si le fichier n'existe pas, affichez un message d'erreur.
-
 int main(int argc, char *argv[])
 {
     if (argc != 2)

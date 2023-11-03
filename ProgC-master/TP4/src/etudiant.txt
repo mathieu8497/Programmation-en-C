@@ -1,0 +1,5 @@
+Nom: Poirel, Prénom: Mathieu, Adresse: Lyon, Note 1: 15, Note 2: 14
+Nom: Tricquet, Prénom: Emma, Adresse: Lyon, Note 1: 14, Note 2: 14
+Nom: Zola, Prénom: Emile, Adresse: Lyon, Note 1: 17, Note 2: 17
+Nom: Coucou, Prénom: ca, Adresse: va, Note 1: 14, Note 2: 16
+Nom: Ielts, Prénom: test, Adresse: Lyon, Note 1: 8, Note 2: 8

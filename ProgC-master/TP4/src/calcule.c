@@ -7,7 +7,6 @@ Auteurs : Mathieu Poirel & Emma Tricquet*/
 #include <stdlib.h>
 #include "operator.h"
 
-
 int main(int argc, char *argv[])
 {
 
@@ -56,8 +55,7 @@ int main(int argc, char *argv[])
             break;
         }
 
-        printf("%i \n",resultat);
-        
+        printf("%i \n", resultat);
     }
 
     return (0);

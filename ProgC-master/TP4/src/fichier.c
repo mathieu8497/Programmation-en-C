@@ -25,8 +25,8 @@ void lire_fichier(char *nom_de_fichier)
 
 void ecrire_dans_fichier(char *nom_de_fichier, char *message)
 {
-    int fd = open(nom_de_fichier, O_CREAT | O_WRONLY, S_IRUSR | S_IWUSR);
-    write(fd, message, sizeof(message));
+    int fd = open(nom_de_fichier, O_CREAT | O_WRONLY | O_APPEND, S_IRUSR | S_IWUSR);
+    write(fd, message, strlen(message));
     printf("Le message a été écrit dans le fichier %s\n", nom_de_fichier);
 }
 
