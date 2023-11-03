@@ -1,3 +1,7 @@
+/*Nom du fichier : fichier.c
+Objectif :gérer des fichiers en écrivant ou lisant dedans
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

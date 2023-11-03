@@ -1,3 +1,7 @@
+/*Nom du fichier : etudiant_bd.c
+Objectif :Gérer une base de données d'étudiants en enregistrant leurs noms, prénoms, adresses et notes dans un fichier texte etudiant.txt
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

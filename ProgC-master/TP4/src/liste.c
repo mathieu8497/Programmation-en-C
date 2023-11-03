@@ -1,3 +1,7 @@
+/*Nom du fichier : fichier.c
+Objectif :gérer une liste de couleurs en inserent ou en affichant la totalité de la liste de couleurs
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include "liste.h"
 #include <stdio.h>
 #include <stdlib.h>

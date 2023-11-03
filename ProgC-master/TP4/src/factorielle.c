@@ -1,3 +1,7 @@
+/*Nom du fichier : factorielle.c
+Objectif :Fonction récursive pour calculer la factorielle d'un entier naturel donné
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 
 // Définition de la fonction factorielle

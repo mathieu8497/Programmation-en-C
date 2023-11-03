@@ -1,3 +1,7 @@
+/*Nom du fichier : chercherfichier.c
+Objectif :Rechercher une phrase dans un fichier donné
+Auteurs : Mathieu Poirel & Emma Tricquet*/
+
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>

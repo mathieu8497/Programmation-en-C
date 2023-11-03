@@ -1,5 +1,5 @@
 /*Nom du fichier : calcule.c
-Objectif :
+Objectif :Réaliser des opérations arithmétiques et logiques simples entre deux nombres en utilisant différents opérateurs en ligne de commande
 Auteurs : Mathieu Poirel & Emma Tricquet*/
 
 #include <stdio.h>
