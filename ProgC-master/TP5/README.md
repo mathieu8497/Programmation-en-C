@@ -11,8 +11,7 @@
 
 
 # Commentaires
-* finir 5.2
-faire 5.3
+* faire 5.3
 faire 5.6
 
 * 

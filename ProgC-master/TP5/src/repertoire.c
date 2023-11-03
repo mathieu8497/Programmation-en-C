@@ -8,9 +8,11 @@ Auteurs : Mathieu Poirel & Emma Tricquet */
 #include <sys/types.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <string.h>
+
 
 /* Fonction Lecture de dossier*/
-int lire_dossier(char *nom_repertoire)
+int lire_dossier(char const *nom_repertoire)
 {
     DIR *dirp = opendir(nom_repertoire);
     struct dirent *ent;
@@ -33,7 +35,7 @@ int lire_dossier(char *nom_repertoire)
 }
 
 /*Fonction récursive lecture de dossier*/
-int lire_dossier_recursif(char *NomRepertoire2)
+int lire_dossier_recursif(char const *NomRepertoire2)
 {
     DIR *dirp = opendir(NomRepertoire2);
     struct dirent *ent;
@@ -42,35 +44,20 @@ int lire_dossier_recursif(char *NomRepertoire2)
         perror("opendir");
         return (EXIT_FAILURE);
     }
-    while (1)
+    while ((ent = readdir(dirp)) != NULL)
     {
-        ent = readdir(dirp);
-        if (ent == NULL)
-        {
-            break;
-        }
         printf("%s\n", ent->d_name);
-
-        if ((ent->d_name == '.') ||(ent->d_name == '..'))
+        if (strcmp(ent->d_name, ".") == 0 || strcmp(ent->d_name, "..") == 0)
         {
-            break;
+            continue;
         }
-        
-
-        if (ent->d_type==4) //un dossier vaut 4 
+        if (ent->d_type == DT_DIR)
         {
             char chemin[400];
-            snprintf(chemin, sizeof(chemin),"%s/%s",NomRepertoire2,ent->d_name);
+            snprintf(chemin, sizeof(chemin), "%s/%s", NomRepertoire2, ent->d_name);
             lire_dossier_recursif(chemin);
         }
-        else{
-            break;
-        }
-        
-        //printf("%i\n", ent->d_type);
-        
     }
-
     closedir(dirp);
     return (EXIT_SUCCESS);
 }
@@ -86,6 +73,9 @@ int main(int argc, char *argv[])
     }
 
     char *nom_repertoire = argv[1];
+    // Exo 1
+    // y = lire_dossier(nom_repertoire);
+    // Exo 2
     y = lire_dossier_recursif(nom_repertoire);
 
     return y;
