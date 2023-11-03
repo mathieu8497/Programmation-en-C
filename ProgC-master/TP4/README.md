@@ -11,6 +11,6 @@
 *
 
 # Commentaires
-* Faire Exo 4.3 et faire 4.7
+* Faire Exo 4.3
 * 
 
