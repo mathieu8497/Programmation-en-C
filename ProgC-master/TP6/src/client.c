@@ -58,37 +58,44 @@ int envoie_recois_message(int socketfd)
   return 0;
 }
 
-void analyse(char *pathname, char *data)
+void analyse(char *pathname, char *data, int nb_couleur)
 {
   // compte de couleurs
   couleur_compteur *cc = analyse_bmp_image(pathname);
 
   int count;
   strcpy(data, "couleurs: ");
-  char temp_string[10] = "10,";
-  if (cc->size < 10)
+
+  char temp_string[10];
+  if (cc->size < nb_couleur)
   {
     sprintf(temp_string, "%d,", cc->size);
   }
+  else
+  {
+    sprintf(temp_string, "%d,", nb_couleur);
+  }
   strcat(data, temp_string);
 
-  // choisir 10 couleurs
-  for (count = 1; count < 11 && cc->size - count > 0; count++)
+  // choisir nb_couleur couleurs (au lieu de toujours 10)
+  for (count = 1; count <= nb_couleur && cc->size - count >= 0; count++)
   {
+    char color_string[20]; // Changer la taille du tableau si nécessaire
     if (cc->compte_bit == BITS32)
     {
-      sprintf(temp_string, "#%02x%02x%02x,", cc->cc.cc24[cc->size - count].c.rouge, cc->cc.cc32[cc->size - count].c.vert, cc->cc.cc32[cc->size - count].c.bleu);
+      sprintf(color_string, "#%02x%02x%02x,", cc->cc.cc24[cc->size - count].c.rouge, cc->cc.cc32[cc->size - count].c.vert, cc->cc.cc32[cc->size - count].c.bleu);
     }
     if (cc->compte_bit == BITS24)
     {
-      sprintf(temp_string, "#%02x%02x%02x,", cc->cc.cc32[cc->size - count].c.rouge, cc->cc.cc32[cc->size - count].c.vert, cc->cc.cc32[cc->size - count].c.bleu);
+      sprintf(color_string, "#%02x%02x%02x,", cc->cc.cc32[cc->size - count].c.rouge, cc->cc.cc32[cc->size - count].c.vert, cc->cc.cc32[cc->size - count].c.bleu);
     }
-    strcat(data, temp_string);
+    strcat(data, color_string);
   }
 
   // enlever le dernier virgule
   data[strlen(data) - 1] = '\0';
 }
+
 
 int envoie_couleurs(int socketfd, char *pathname)
 {
@@ -100,10 +107,15 @@ int envoie_couleurs(int socketfd, char *pathname)
   printf("Combien de couleurs voulez vous afficher dans le cercle ? : ");
   fgets(couleur, sizeof(couleur), stdin);
   nb_couleur = atoi(couleur);
+if (nb_couleur > 30)
+    {
+        printf("Vous devez choisir un nombre de couleurs toujours inférieur ou égal à 30.\n");
+        return 1;
+    }  
   printf("nombre couleur:%i",nb_couleur);
 
   memset(data, 0, sizeof(data));
-  analyse(pathname, data);
+  analyse(pathname, data, nb_couleur);
 
   int write_status = write(socketfd, data, strlen(data));
   if (write_status < 0)
