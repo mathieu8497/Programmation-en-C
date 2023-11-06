@@ -58,7 +58,7 @@ int envoie_recois_message(int socketfd)
   return 0;
 }
 
-void analyse(char *pathname, char *data, int nb_couleur)
+void analyse(char *pathname, char *data, int nb_couleur)//on ajoute en paramètre de la fonction le nombre de couleurs que l'on veut afficher
 {
   // compte de couleurs
   couleur_compteur *cc = analyse_bmp_image(pathname);
@@ -107,12 +107,12 @@ int envoie_couleurs(int socketfd, char *pathname)
   printf("Combien de couleurs voulez vous afficher dans le cercle ? : ");
   fgets(couleur, sizeof(couleur), stdin);
   nb_couleur = atoi(couleur);
-if (nb_couleur > 30)
+if (nb_couleur > 30)//modifier condition pour afficher jusqu'à 30 couleurs
     {
         printf("Vous devez choisir un nombre de couleurs toujours inférieur ou égal à 30.\n");
         return 1;
     }  
-  printf("nombre couleur:%i",nb_couleur);
+  printf("nombre couleur:%i",nb_couleur);//test nombre couleurs
 
   memset(data, 0, sizeof(data));
   analyse(pathname, data, nb_couleur);

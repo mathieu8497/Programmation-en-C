@@ -38,9 +38,9 @@ int envoie_recois_message(int socketfd)
   char code[10];
   if (sscanf(message, "%8s", code) == 1)
   {
-    if (strcmp(code, "calcule:") == 0)
+    if (strcmp(code, "calcule:") == 0)//si le message commence par calcule:
     {
-      printf("On calcule\n");
+      printf("On calcule\n");//Test
       strcat(data, message);
     }
     else

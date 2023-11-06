@@ -81,13 +81,13 @@ int recois_envoie_message(int client_socket_fd, char *data)
   return (EXIT_SUCCESS);
 }
 
-int recois_numeros_calcule(int client_socket_fd, char *data)
+int recois_numeros_calcule(int client_socket_fd, char *data)//fonction qui permet de calculer les opérations
 {
   char operateur;
   int num1, num2;
   int resultat;
   sscanf(data + 8, "%c %d %d", &operateur, &num1, &num2);
-  switch (operateur)
+  switch (operateur)//on fait un switch pour chaque opérateur
   {
   case '+':
     resultat = num1 + num2;
@@ -198,7 +198,7 @@ void gerer_client(int client_socket_fd)
     char code[10];
     if (sscanf(data, "%8s", code) == 1)
     {
-      if (strcmp(code, "calcule:") == 0)
+      if (strcmp(code, "calcule:") == 0)//condition qui permet de savoir si le client veut faire un calcul ou juste envoyer un message
       {
         printf("Calcul en cours: %s\n", data);
         recois_numeros_calcule(client_socket_fd, data);
