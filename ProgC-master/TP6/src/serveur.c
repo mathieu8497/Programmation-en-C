@@ -50,10 +50,10 @@ int plot(char *data)
   char *saveptr = NULL;
   char *str = data;
   char *token = strtok_r(str, ",", &saveptr);
-  char *nb = strstr(data, "couleurs: "); 
-  nb += strlen("couleurs: ");
-  int num_colors = atoi(nb);
-  printf("le nombre de couleurs est %d", num_colors);
+  char *nb = strstr(data, "couleurs: "); //trouver la chaine couleurs:
+  nb += strlen("couleurs: ");//on veut ce qui est après couleurs :
+  int num_colors = atoi(nb);//on convertit en entier
+  printf("le nombre de couleurs est %d", num_colors);//Test verif nb_couleurs
 
   double angles[num_colors];
   memset(angles, 0, sizeof(angles));
