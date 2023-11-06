@@ -50,7 +50,10 @@ int plot(char *data)
   char *saveptr = NULL;
   char *str = data;
   char *token = strtok_r(str, ",", &saveptr);
-  const int num_colors = 10;
+  char *nb = strstr(data, "couleurs: "); 
+  nb += strlen("couleurs: ");
+  int num_colors = atoi(nb);
+  printf("le nombre de couleurs est %d", num_colors);
 
   double angles[num_colors];
   memset(angles, 0, sizeof(angles));
